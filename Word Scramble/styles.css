@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: linear-gradient(#d4d6d5, #787878);
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    /*this is what made the whole thing vertically centered*/
+    min-height: 100vh;
+}
+
+.contentBox {
+    width: 400px;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+}
+.contentBox h2 {
+    font-size: 25px;
+    font-weight: 500;
+    padding: 16px 25px;
+    border-bottom: 1px solid black;
+}
+.contentBox .game {
+    margin: 25px 20px 35px;
+}
+.contentBox .word {
+    -webkit-user-select: none; /* Safari */
+    user-select: none;
+    font-size: 33px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 24px;
+    margin-right: -24px;
+    word-break: break-all;
+    text-transform: uppercase;
+}
+.game .info {
+    margin: 25px 0 20px;
+}
+.info p{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.info p b{
+    font-weight: 500;
+}
+.game input {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    padding: 0 16px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+.game input:focus {
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.8);
+}
+.game input::placeholder {
+    color: #aaa;
+}
+.game input:focus::placeholder {
+    color: #bfbfbf;
+}
+.game .buttons {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.buttons button {
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 17px;
+    border-radius: 5px;
+    width:calc(100% / 2 - 8px);
+    transition: all 0.3s ease;
+}
+.buttons button:active {
+    transform: scale(1.1);
+}
+.buttons .refreshBtn {
+    background: rgb(181, 181, 181);
+}
+.buttons .refreshBtn:hover {
+    background: grey;
+}
+.buttons .checkBtn {
+    background: rgb(75, 160, 244);
+}
+.buttons .checkBtn:hover {
+    background: blue;
+}
+@media screen and (max-width: 470px) {
+    .container h2{
+      font-size: 22px;
+      padding: 13px 20px;
+    }
+    .content .word{
+      font-size: 30px;
+      letter-spacing: 20px;
+      margin-right: -20px;
+    }
+    .container .content{
+      margin: 20px 20px 30px;
+    }
+    .details p{
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .content input{
+      height: 55px;
+      font-size: 17px;
+    }
+    .buttons button{
+      padding: 14px 0;
+      font-size: 16px;
+      width: calc(100% / 2 - 7px);
+    }
+  }
+
+
+
+/*
+body {
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #ffffff;
+}
+.contentBox {
+    background: rgb(222, 237, 242);
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 633px;
+    width: 693px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+/*Title Area*/ /*
+.titleArea {
+    border: 1px solid black;
+    width: 693px;
+    height: 90px;
+    position: absolute;
+    border-top: 5px;
+}
+.titleArea h2 {
+    text-align: left;
+    font-size: 48px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 25px;
+}
+
+/*Scrambled Word*/ /*
+.game .scrambledWord {
+    user-select: none;
+    font-size: 33px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 24px;
+    margin-right: -24px;
+    word-break: break-all;
+    text-transform: uppercase;
+}
+
+.contentBox .game {
+    margin: 25px 20px 35px;
+}
+
+/*Info*/ /*
+.game .info {
+    margin: 25px 0 20px;
+    text-align: left;
+    font-size: 18px;
+}
+.info p{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.info p b{
+    font-weight: 500;
+}
+
+/*Enter a valid word*/ /*
+.game input{
+    width: 582px;
+    height: 60px;
+    outline: none;
+    padding: 0 16px;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+/*When you click on the input box*/ /*
+.validWord input:focus {
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.8);
+}
+.validWord input::placeholder {
+    color: #aaa;
+}
+.validWord input:focus::placeholder {
+    color: #bfbfbf;
+}
+
+/*Buttons*/ /*
+.refreshBtn {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 50px;
+    width: 303px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.checkBtn {
+    border: 1px solid black; 
+    border-radius: 5px;
+    height: 50px;
+    width: 303px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.buttons {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    bottom: 0;
+}
+.buttons button {
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+.buttons button:active {
+    transform: scale(1.1);
+}
+.buttons .refreshBtn {
+    background: #6C757D;
+}
+.buttons .refreshBtn:active {
+    background: #5f666d;
+}
+.buttons .checkBtn {
+    background: #5373F0;
+}
+.buttons .checkBtn:active {
+    background: #2c52ed;
+}
+
